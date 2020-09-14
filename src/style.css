@@ -1,0 +1,125 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background: url(bubbly.gif), fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 50px;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+.square:hover {
+  background-color: aqua;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin: 20px 0px 10px 0px;
+  text-align: center;
+}
+
+.square {
+  background: #fff;
+  border: 2.5px solid rgb(6, 243, 203);
+  float: left;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 74px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 74px;
+  color: #fa079d;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+.board {
+  position: absolute;
+  right: 35%;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+.game-title {
+  font-size: 70px;
+  background: linear-gradient(#f3096b, rgba(9, 221, 221, 0.333));
+  border-radius: 2rem;
+  color: #1c0338;
+  text-align: center;
+}
+
+.game-board {
+  font-size: 36px;
+  color: rgb(223, 23, 73);
+}
+.game-instruct {
+  text-align: center;
+  color: #5f0692;
+}
+
+.game-info {
+  margin-left: 20px;
+  font-size: large;
+  font-family: cursive;
+  margin: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .board {
+    position: 5rem;
+  }
+  .square {
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+  }
+  .game-title {
+    font-size: 40px;
+  }
+  .game-instruct {
+    font-size: small;
+  }
+  .game-board {
+    font-size: 25px;
+    float: left;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .board {
+    position: absolute;
+    right: 15rem;
+  }
+  .square {
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+  }
+  .game-title {
+    font-size: 45px;
+  }
+  .game-board {
+    font-size: 35px;
+    align-items: center;
+  }
+}
