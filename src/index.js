@@ -9,6 +9,7 @@ class Board extends React.Component {
     this.state = {
       squares: Array(16).fill(null),
       xIsNext: true,
+      count: 0,
     };
   }
 
@@ -21,6 +22,7 @@ class Board extends React.Component {
     this.setState({
       squares: squares,
       xIsNext: !this.state.xIsNext,
+      count: this.state.count + 1,
     });
   }
 
@@ -38,7 +40,10 @@ class Board extends React.Component {
     let status;
     if (winner) {
       status = "Winner: " + winner;
-    } else {
+    } 
+    else if (this.state.count == 25) {
+      status = "It's a Tie ";
+    else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
 
@@ -77,9 +82,9 @@ class Board extends React.Component {
           <div className='board-row'>
             {this.renderSquare(20)}
             {this.renderSquare(21)}
+            {this.renderSquare(22)}
             {this.renderSquare(23)}
             {this.renderSquare(24)}
-            {this.renderSquare(25)}
           </div>
         </div>
       </div>
