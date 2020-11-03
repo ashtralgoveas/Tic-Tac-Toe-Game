@@ -43,6 +43,7 @@ class Board extends React.Component {
     } 
     else if (this.state.count == 25) {
       status = "It's a Tie ";
+    }
     else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
